@@ -1,5 +1,5 @@
-demo1 - It is backend file in node express
-demo2 - It is frontend file angular
+- demo1 - It is backend file in node express
+- demo2 - It is frontend file angular
 
 add this dotenv
 
