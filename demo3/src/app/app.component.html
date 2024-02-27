@@ -1,0 +1,43 @@
+<div class="appContainer">
+  <h3>Add Employees</h3>
+  <div class="appForm">
+    <span class="appFormItem">
+      <label for="name">Id: </label>
+      <input type="text" [(ngModel)]="employee.id" />
+    </span>
+    <span class="appFormItem">
+      <label for="name">Name: </label>
+      <input type="text" [(ngModel)]="employee.name" />
+    </span>
+    <span class="appFormItem">
+      <label for="name">Role: </label>
+      <input type="text" [(ngModel)]="employee.role" />
+    </span>
+    <span class="appFormItem">
+      <button (click)="addEmployee()">submit</button>
+    </span>
+  </div>
+
+  <div class="employees">
+    <h3>Employees:</h3>
+    <div class="employeesBox">
+      <div class="employeeBoxWrapper">
+        <span class="employeeItem"> Id</span>
+        <span class="employeeItem"> Name </span>
+        <span class="employeeItem"> Role </span>
+        <span class="employeeItem"> Actions </span>
+      </div>
+
+      @for (item of employees; track $index) {
+      <div class="employeeBoxWrapper">
+        <span class="employeeItem"> {{ item.id }}</span>
+        <span class="employeeItem"> {{ item.name }} </span>
+        <span class="employeeItem"> {{ item.role }} </span>
+        <span class="employeeItem delete" (click)="deleteEmployee(item.id)">
+          delete
+        </span>
+      </div>
+      }
+    </div>
+  </div>
+</div>
