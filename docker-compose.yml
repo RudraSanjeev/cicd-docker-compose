@@ -4,7 +4,7 @@ services:
   # MongoDB service
   mongo_db:
     container_name: db_container
-    image: mongo:latest
+    image: rudrasanjeev/mongo
     restart: always
     volumes:
       - mongo_db:/data/db
@@ -12,6 +12,7 @@ services:
   # Angular web service
   web:
     build: demo3
+    image: rudrasanjeev/fullstack-demo-web
     ports:
       - 4200:4200
     volumes:
@@ -22,6 +23,7 @@ services:
   # Node API service
   api:
     build: demo1
+    image: rudrasanjeev/fullstack-demo-api
     ports:
       - 4000:8000
     environment:
