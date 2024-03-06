@@ -1,11 +1,8 @@
-- demo1 - It is backend file in node express
-- demo2 - It is frontend file angular
+#### How to auto push to docker hub on using github actions
 
-add this dotenv
+- first see the structure of project:
+- docker-compose file should be in root dir
 
-```.env
+**For the first time you need to build and push to docker hub mannually.**
 
-PORT=8000
-MONGO_URI="mongodb://localhost:27017/"
-DB_NAME="my_db"
-```
+- for the second time you just need to make changes and commit on commit it should auto test and build and push to docker registry.
