@@ -1,11 +1,9 @@
-#### How to auto push to docker hub on using github actions
+#### How to auto push to docker hub using github action
 
 - first see the structure of project:
 - docker-compose file should be in root dir
 
 **For the first time you need to build and push to docker hub mannually.**
-
-- for the second time you just need to make changes and commit on commit it should auto test and build and push to docker registry.
 
 #### for the first time compose.yml
 
@@ -50,6 +48,8 @@ volumes:
 ```
 
 #### second time onwards compose.yml
+
+- for the second time onwards you just commit and push. Github action will auto push to the docker hub.
 
 ```yml
 version: "3.9"
