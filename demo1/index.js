@@ -48,7 +48,7 @@ app.delete("/api/:id", async (req, res) => {
     if (!employee) {
       return res.status(400).json("no employee found !");
     }
-
+    await Employee.deleteOne({ id: employeeId });
     res.status(200).json("employee has been deleted !");
   } catch (err) {
     res.status(500).json(err);
